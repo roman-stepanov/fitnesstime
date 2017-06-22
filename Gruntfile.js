@@ -23,6 +23,15 @@ module.exports = function(grunt) {
           src: 'normalize.css',
           dest: 'build/css/'
         }]
+      },
+      resources: {
+        files: [{
+          expand: true,
+          src: [
+            'fonts/**.{woff,woff2}'
+          ],
+          dest: 'build/'
+        }]
       }
     },
 
