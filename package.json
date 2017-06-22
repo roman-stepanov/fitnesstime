@@ -11,5 +11,11 @@
   "bugs": {
     "url": "https://github.com/stepanov-roman/fitnesstime/issues"
   },
-  "homepage": "https://github.com/stepanov-roman/fitnesstime#readme"
+  "homepage": "https://github.com/stepanov-roman/fitnesstime#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "load-grunt-tasks": "^3.5.2"
+  }
 }
