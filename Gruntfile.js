@@ -34,6 +34,25 @@ module.exports = function(grunt) {
       }
     },
 
+    postcss: {
+      style: {
+        options: {
+          processors: [
+            require('autoprefixer')({
+              browsers: [
+                'last 1 version',
+                'last 2 Chrome versions',
+                'last 2 Firefox versions',
+                'last 2 Opera versions',
+                'last 2 Edge versions'
+              ]
+            })
+          ]
+        },
+        src: 'build/css/style.css'
+      }
+    },
+
     browserSync: {
       build: {
         bsFiles: {
@@ -60,7 +79,8 @@ module.exports = function(grunt) {
       style: {
         files: 'less/**/*.less',
         tasks: [
-          'less'
+          'less',
+          'postcss'
         ],
         options: {
           spawn: false
@@ -72,7 +92,8 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
     'clean',
     'copy',
-    'less'
+    'less',
+    'postcss'
   ]);
 
   grunt.registerTask('serve', [
