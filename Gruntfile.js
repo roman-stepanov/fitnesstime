@@ -26,11 +26,20 @@ module.exports = function(grunt) {
       }
     },
 
+    less: {
+      style: {
+        files: {
+          'build/css/style.css': 'less/style.less'
+        }
+      }
+    },
+
     browserSync: {
       build: {
         bsFiles: {
           src: [
-            'build/*.html'
+            'build/*.html',
+            'build/css/*.css'
           ]
         },
         options: {
@@ -47,13 +56,23 @@ module.exports = function(grunt) {
       html: {
         files: '*.html',
         tasks: 'copy:html'
+      },
+      style: {
+        files: 'less/**/*.less',
+        tasks: [
+          'less'
+        ],
+        options: {
+          spawn: false
+        }
       }
     }
   });
 
   grunt.registerTask('build', [
     'clean',
-    'copy'
+    'copy',
+    'less'
   ]);
 
   grunt.registerTask('serve', [
