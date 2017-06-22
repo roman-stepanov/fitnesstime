@@ -1,0 +1,15 @@
+{
+  "name": "fitnesstime",
+  "version": "1.0.0",
+  "description": "Лендинг для фитнес-клуба",
+  "author": "Roman Stepanov",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stepanov-roman/fitnesstime.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stepanov-roman/fitnesstime/issues"
+  },
+  "homepage": "https://github.com/stepanov-roman/fitnesstime#readme"
+}
