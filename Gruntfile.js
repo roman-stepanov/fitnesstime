@@ -15,6 +15,14 @@ module.exports = function(grunt) {
           src: '*.html',
           dest: 'build/'
         }]
+      },
+      normalize: {
+        files: [{
+          expand: true,
+          cwd: 'node_modules/normalize.css/',
+          src: 'normalize.css',
+          dest: 'build/css/'
+        }]
       }
     },
 
