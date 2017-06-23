@@ -1,0 +1,29 @@
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  color: @clr_white;
+  font-family: @fnt_Oswald;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0;
+  padding: 17px 0px 17px 0px;
+  border: 1px solid @clr_darkred;
+  width: 230px;
+  background-color: @clr_lightred;
+  transition: color 0.6s, background-color 0.6s;
+
+  &:hover {
+    color: @clr_lightred;
+    background-color: @clr_white;
+  }
+
+  &:active {
+    color: @clr_white;
+    background-color: @clr_darkred;
+  }
+}
