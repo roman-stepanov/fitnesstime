@@ -5,26 +5,32 @@
 
 .content-section {
 
+  &--team {
+    background-color: @clr_black;
+    background-image: url("../img/bg-team.jpg");
+  }
 }
 
 .content-section__container {
   margin: 0 auto;
-  padding: 0;
+  padding: 56px 0px 30px 0px;
   width: @min-width;
 }
 
 .content-section__title-wrapper {
   text-align: center;
   margin: 0;
-  padding: 56px 0px 48px 0px;
+  padding: 0px 0px 48px 0px;
 }
 
 .content-section__title {
-  display: inline-block;
+  // display: inline-block;
+  position: relative;
   font-family: @fnt_Oswald;
   font-style: normal;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
   margin: 0;
   padding: 0;
 
@@ -34,7 +40,15 @@
   }
 
   &--h2 {
+    padding: 0px 0px 8px 0px;
+  }
 
+  &::after {
+    content: "";
+    position: absolute;
+    right: 562px;
+    bottom: 0px;
+    left: 563px;
   }
 
   &--black {
@@ -47,6 +61,10 @@
 
   &--white {
     color: @clr_white;
+
+    &::after {
+      border-bottom: 1px solid @clr_white;
+    }
   }
 }
 

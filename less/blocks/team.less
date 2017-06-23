@@ -1,0 +1,95 @@
+.team__grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 0;
+  margin: 0;
+  padding: 13px 0px 0px 0px;
+}
+
+.trainer-card {
+  display: inline-block;
+  position: relative;
+  margin: 0px 0px 30px 0px;
+  padding: 0px 0px 75px 0px;
+  width: 270px;
+  height: 240px;
+  overflow: hidden;
+}
+
+.trainer-card__img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 270px;
+  height: 240px;
+}
+
+.trainer-card__info {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 240px;
+  margin: 0;
+  padding: 17px 20px 20px 20px;
+  height: 278px;
+  background-color: @clr_white;
+  transition: top 0.8s ease;
+
+  .trainer-card:hover & {
+    top: 0px;
+  }
+}
+
+.trainer-card__detail {
+  margin: 0;
+  padding: 0px 0px 10px 0px;
+}
+
+.trainer-card__name {
+  color: @clr_black;
+  font-family: @fnt_Oswald;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.trainer-card__position {
+  display: block;
+  color: @clr_lightgray;
+  font-family: @fnt_Oswald;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin: -5px 0px 0px 0px;
+  padding: 0;
+}
+
+.trainer-card__about {
+  flex-grow: 1;
+  color: @clr_lightgray;
+  font-family: @fnt_OpenSans;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.trainer-card__social {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0;
+  margin: 0;
+  padding: 5px 0px 0px 0px;
+}
