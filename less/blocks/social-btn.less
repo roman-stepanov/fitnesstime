@@ -1,3 +1,13 @@
+.social {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 .social-btn {
   display: inline-block;
   position: relative;
@@ -15,16 +25,67 @@
     background-repeat: no-repeat;
   }
 
-  &--facebook {
-
-    &-white::before {
+  .social--white-btn & {
+    &--facebook::before {
       background-position: -5px -5px;
     }
 
-    &-gray::before {
+    &--twitter::before {
+      background-position: -105px -5px;
+    }
+
+    &--pinterest::before {
+      background-position: -205px -5px;
+    }
+
+    &--gplus::before {
+      background-position: -305px -5px;
+    }
+
+    &--tumblr::before {
+      background-position: -405px -5px;
+    }
+
+    &--instagram::before {
+      background-position: -505px -5px;
+    }
+
+    &--rss::before {
+      background-position: -605px -5px;
+    }
+  }
+
+  .social--gray-btn & {
+    &--facebook::before {
       background-position: -30px -5px;
     }
 
+    &--twitter::before {
+      background-position: -130px -5px;
+    }
+
+    &--pinterest::before {
+      background-position: -230px -5px;
+    }
+
+    &--gplus::before {
+      background-position: -330px -5px;
+    }
+
+    &--tumblr::before {
+      background-position: -430px -5px;
+    }
+
+    &--instagram::before {
+      background-position: -530px -5px;
+    }
+
+    &--rss::before {
+      background-position: -630px -5px;
+    }
+  }
+
+  &--facebook {
     &:hover::before {
       background-position: -55px -5px;
     }
@@ -35,15 +96,6 @@
   }
 
   &--twitter {
-
-    &-white::before {
-      background-position: -105px -5px;
-    }
-
-    &-gray::before {
-      background-position: -130px -5px;
-    }
-
     &:hover::before {
       background-position: -155px -5px;
     }
@@ -54,15 +106,6 @@
   }
 
   &--pinterest {
-
-    &-white::before {
-      background-position: -205px -5px;
-    }
-
-    &-gray::before {
-      background-position: -230px -5px;
-    }
-
     &:hover::before {
       background-position: -255px -5px;
     }
@@ -73,15 +116,6 @@
   }
 
   &--gplus {
-
-    &-white::before {
-      background-position: -305px -5px;
-    }
-
-    &-gray::before {
-      background-position: -330px -5px;
-    }
-
     &:hover::before {
       background-position: -355px -5px;
     }
@@ -92,15 +126,6 @@
   }
 
   &--tumblr {
-
-    &-white::before {
-      background-position: -405px -5px;
-    }
-
-    &-gray::before {
-      background-position: -430px -5px;
-    }
-
     &:hover::before {
       background-position: -455px -5px;
     }
@@ -111,15 +136,6 @@
   }
 
   &--instagram {
-
-    &-white::before {
-      background-position: -505px -5px;
-    }
-
-    &-gray::before {
-      background-position: -530px -5px;
-    }
-
     &:hover::before {
       background-position: -555px -5px;
     }
@@ -130,15 +146,6 @@
   }
 
   &--rss {
-
-    &-white::before {
-      background-position: -605px -5px;
-    }
-
-    &-gray::before {
-      background-position: -630px -5px;
-    }
-
     &:hover::before {
       background-position: -655px -5px;
     }
