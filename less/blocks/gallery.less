@@ -1,0 +1,100 @@
+.gallery__grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery-item {
+  display: inline-block;
+  position: relative;
+  margin: 0px 0px 25px 0px;
+  padding: 0;
+  width: 270px;
+}
+
+.gallery-item__thumbs-wrapper {
+  position: relative;
+}
+
+.gallery-item__thumbs {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 270px;
+  height: 180px;
+}
+
+.gallery-item__thumbs-cover {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  background-color: @clr_lightred;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.7s, visibility 0s 0.7s;
+
+  .gallery-item__thumbs-wrapper:hover & {
+    visibility: visible;
+    opacity: 0.75;
+    transition: opacity 0.7s, visibility 0s;
+  }
+}
+
+.gallery-item__thumbs-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 68px;
+    left: 113px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: @clr_white;
+    background-image: url("../img/big-icons.png");
+    background-repeat: no-repeat;
+    background-position: 0px -1px;
+  }
+
+  &:active::before {
+    background-position: -45px -1px
+  }
+}
+
+.gallery-item__info {
+  margin: 0;
+  padding: 7px 0px 0px 0px;
+  background-color: @clr_white;
+}
+
+.gallery-item__title {
+  color: @clr_black;
+  font-family: @fnt_Oswald;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery-item__date {
+  display: block;
+  color: @clr_lightgray;
+  font-family: @fnt_Oswald;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+}
