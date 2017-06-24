@@ -33,6 +33,17 @@ module.exports = function(grunt) {
           ],
           dest: 'build/'
         }]
+      },
+      jquery: {
+        files: [{
+          expand: true,
+          cwd: 'node_modules/jquery/dist/',
+          src: [
+            'jquery.min.js',
+            'jquery.min.map'
+          ],
+          dest: 'build/js/'
+        }]
       }
     },
 
