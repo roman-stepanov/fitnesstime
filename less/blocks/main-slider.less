@@ -1,0 +1,143 @@
+.main-slider {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  min-width: @min-width;
+  width: 100%;
+  min-height: 581px;
+  overflow: hidden;
+  background-color: @clr_lightgray;
+}
+
+.main-slider__control {
+  position: absolute;
+  top: 270px;
+  border: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: @clr_black;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @clr_lightred;
+  }
+
+  &:active {
+    background-color: @clr_darkred;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    width: 11px;
+    height: 11px;
+    border-bottom: 2px solid @clr_white;
+    border-left: 2px solid @clr_white;
+  }
+
+  &--prev {
+    left: 15px;
+
+    &::before {
+      left: 15px;
+      transform: rotate(45deg);
+    }
+  }
+
+  &--next {
+    right: 15px;
+
+    &::before {
+      right: 15px;
+      transform: rotate(225deg);
+    }
+  }
+}
+
+.main-slider__slides {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  width: @min-width;
+  height: 581px;
+}
+
+.slide {
+  visibility: hidden;
+  position: absolute;
+  width: @min-width;
+  height: 581px;
+
+  &--active {
+    visibility: visible;
+  }
+}
+
+.slide__content {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.slide__img {
+  display: block;
+  position: relative;
+  top: 0px;
+  left: -700px;
+  margin: 0;
+  padding: 0;
+  width: 2570px;
+  height: 581px;
+}
+
+.slide__text {
+  position: absolute;
+  top: 217px;
+  left: 7px;
+  color: @clr_white;
+}
+
+.slide__paragraph {
+  color: @clr_white;
+  font-family: @fnt_Oswald;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0px 0px 2px 0px;
+  padding: 0;
+
+  &--small {
+    font-size: 12px;
+  }
+
+  &--big {
+    font-size: 30px;
+    font-weight: 700;
+  }
+}
+
+.slide__highlight {
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 11px 20px 10px 20px;
+
+  .slide__paragraph--small & {
+    padding: 5px 20px 4px 20px;
+  }
+
+  .slide__paragraph--big & {
+    padding: 21px 20px 21px 20px;
+  }
+
+  &--lightred {
+    background-color: @clr_lightred;
+  }
+
+  &--black {
+    background-color: @clr_black;
+  }
+}
