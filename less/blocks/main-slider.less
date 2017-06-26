@@ -69,9 +69,13 @@
   position: absolute;
   width: @min-width;
   height: 581px;
+  opacity: 0;
+  transition: opacity 1s, visibility 0s 1s;
 
   &--active {
     visibility: visible;
+    opacity: 1;
+    transition: opacity 1s, visibility 0s;
   }
 }
 
